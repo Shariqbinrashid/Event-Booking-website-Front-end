@@ -1,0 +1,973 @@
+    @import url('https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+    * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Times New Roman;
+    }
+    
+    #live {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+    
+    #livecon a :hover {
+        width: 110px;
+        height: 100px;
+        transition: .5s ease-in-out;
+    }
+    
+    #Header {
+        width: 100%;
+        background: linear-gradient( -45deg, rgba(190, 11, 214, 0.589), rgba(207, 15, 15, 0.603), rgba(21, 191, 243, 0.568), rgba(225, 238, 39, 0.534), rgba(240, 80, 17, 0.589), rgba(100, 23, 201, 0.63));
+        background-size: 200% 300%;
+        animation: gradientbg 10s ease-in-out infinite alternate;
+        height: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+        border-radius: 0px 0px 10px 10px;
+    }
+    /*nav bar*/
+    
+    nav {
+        padding: 0px;
+        margin-left: 0px;
+        width: 100%;
+    }
+    
+    #logo {
+        margin-top: -30px;
+        margin-left: -30px;
+        float: left;
+        width: 280px;
+        height: 100px
+    }
+    
+    nav ul {
+        float: right;
+        margin-right: 7px;
+    }
+    
+    nav ul li {
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        padding: 7px 5px;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+    
+    a.active {
+        background: #d6ffd623;
+        border: 1px solid rgba(65, 42, 42, 0.164);
+    }
+    
+    a:hover {
+        background: #0000001a;
+        border: 1px solid rgba(65, 42, 42, 0.164);
+    }
+    
+    .location select {
+        font-family: 'Montserrat', sans-serif;
+        background: transparent;
+        border: 1px solid rgba(65, 42, 42, 0.164);
+        border-radius: 3px;
+        padding: 5px 5px;
+    }
+    
+    .location select:hover {
+        background: #0000001a;
+        border: 1px solid rgba(85, 76, 76, 0.164);
+    }
+    
+    div.location select option {
+        background-color: #1d1b1b49;
+    }
+    
+    .locsubmenu {
+        display: none;
+    }
+    
+    .checkbtn {
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        float: right;
+        line-height: 30px;
+        margin-right: 5px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    #check {
+        display: none;
+    }
+    
+    .checkbtn:hover {
+        color: #2c2626;
+    }
+    
+    nav .LocationMobile {
+        display: none;
+    }
+    
+    .search {
+        text-align: center;
+        margin-top: -30px;
+        height: fit-content;
+    }
+    
+    .search h1 {
+        font-family: 'Monsieur La Doulaise', cursive;
+        background: -webkit-linear-gradient(rgb(211, 233, 18), rgb(230, 13, 13));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: left;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .search input {
+        font-size: 15px;
+        width: 300px;
+        height: 40px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(85, 76, 76, 0.164);
+        float: right;
+        background: transparent;
+    }
+    
+    .search input:hover {
+        border-bottom: 1px solid rgba(85, 76, 76, 0.527);
+    }
+    
+    #serbtn {
+        border: 1px solid rgba(85, 76, 76, 0.116);
+        background: transparent;
+        height: 40px;
+        width: 30px;
+        float: right;
+    }
+    
+    #serbtn:hover {
+        border: 1px solid rgba(85, 76, 76, 0.212);
+    }
+    
+    .cover {
+        height: 500px;
+        box-shadow: 5px 10px 18px #888888;
+        padding: 0;
+    }
+    
+    .vendors {
+        margin-top: 30px;
+    }
+    
+    .vendors img {
+        width: 100%;
+        box-shadow: 3px 10px 15px #888888;
+        height: 100%;
+    }
+    
+    .vendors h1,
+    .venues h1 {
+        font-family: 'Monsieur La Doulaise', cursive;
+        background: -webkit-linear-gradient(rgb(211, 233, 18), rgb(230, 13, 13));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: left;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .box {
+        position: relative;
+        height: 300px;
+    }
+    
+    .vendors h2 {
+        background: rgba(255, 253, 253, 0.295);
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        bottom: 40%;
+        left: 30%;
+        font-weight: bold;
+        border: 1px solid black;
+        font-size: 15px;
+    }
+    
+    .box a img:hover {
+        box-shadow: 8px 15px 18px #888888;
+    }
+    
+    .vendors h2:hover {
+        cursor: pointer;
+    }
+    
+    .venues #venbtn,
+    .vendors button {
+        background: -webkit-linear-gradient(rgb(211, 233, 18), rgb(230, 13, 13));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        float: right;
+        border: 1px solid rgba(0, 0, 0, 0.336);
+        margin-top: 15px;
+        margin-right: 20px;
+        width: 100px;
+    }
+    
+    .venues #venbtn:hover,
+    .vendors button:hover {
+        box-shadow: 5px 10px 15px #888888;
+    }
+    
+    .venues img {
+        width: 100%;
+        height: 80%;
+    }
+    
+    .venues h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .boxv {
+        position: relative;
+        height: 300px;
+        box-shadow: 3px 10px 15px #888888;
+    }
+    
+    .boxv button {
+        background: rgba(255, 253, 253, 0.295);
+        font-family: 'Kaushan Script', cursive;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-weight: bold;
+        border: 1px solid rgba(0, 0, 0, 0.363);
+        font-size: 10px;
+    }
+    
+    .boxv button:hover {
+        border: 1.5px solid rgba(32, 31, 31, 0.158);
+        box-shadow: 3px 10px 15px #888888;
+    }
+    
+    div.areyou {
+        background-image: url("D:/eventtocart/web/DSC_8325.JPG");
+        height: 400px;
+        box-shadow: 3px 10px 15px #888888;
+    }
+    
+    div.areyou h1 {
+        font-family: 'Marck Script', cursive;
+        text-align: left;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(26, 211, 218));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    div.areyou {
+        text-align: center;
+    }
+    
+    div.areyou i {
+        font-size: 60px;
+        margin-top: 5px;
+        background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(26, 211, 218));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    div.areyou h3 {
+        text-align: left;
+        font-size: 15px;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(235, 235, 235);
+    }
+    
+    .signupv {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 40px
+    }
+    
+    .signupv button {
+        border: 1px solid rgba(0, 0, 0, 0.233);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.486);
+        width: 120px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .signupv button:hover {
+        border: 1px solid rgba(0, 0, 0, 0.699);
+        width: 130px;
+        background: rgba(255, 255, 255, 0.26);
+    }
+    
+    div.footer {
+        margin-top: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.226);
+        background: linear-gradient(-45deg, rgba(190, 11, 214, 0.589), rgba(207, 15, 15, 0.603), rgba(21, 191, 243, 0.568), rgba(225, 238, 39, 0.534), rgba(240, 80, 17, 0.589), rgba(100, 23, 201, 0.63));
+        height: fit-content;
+        background-size: 200% 300%;
+        animation: gradientbg 10s ease-in-out infinite alternate;
+    }
+    
+    div.f1 ul li {
+        display: inline;
+    }
+    
+    div.connect ul li img {
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+    }
+    
+    div.connect ul li img:hover {
+        transform: rotate(10deg);
+    }
+    
+    div.company ul {
+        list-style: none;
+    }
+    
+    div.copyright {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    .copyright ul li {
+        display: inline;
+    }
+    
+    .applogo {
+        margin-top: 20px;
+    }
+    
+    .applogo ul li {
+        list-style: none;
+        display: inline;
+    }
+    
+    .applogo ul li a img {
+        width: 100px;
+        height: 50px;
+    }
+    
+    #form {
+        width: 600px;
+        border: 1px solid rgba(0, 0, 0, 0.39);
+        margin: 20px auto;
+        box-shadow: 3px 10px 15px #888888;
+        height: 500px;
+        position: relative;
+    }
+    
+    .transbtn {
+        width: 350px;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 2px 3px 10px #8888887a;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .tglbtn {
+        padding: 10px 30px;
+        background: transparent;
+        outline: none;
+        position: relative;
+        cursor: pointer;
+        border: 0;
+    }
+    
+    .transbtn button:focus {
+        background: linear-gradient(-45deg, rgba(225, 238, 39, 0.534), rgba(240, 80, 17, 0.589), rgba(100, 23, 201, 0.63));
+        border-radius: 5px;
+    }
+    
+    .signInicons {
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+    
+    .signInicons i {
+        font-size: 40px;
+        margin-right: 20px;
+        background: -webkit-linear-gradient(-45deg, rgba(225, 238, 39, 0.534), rgba(240, 80, 17, 0.589), rgba(100, 23, 201, 0.63));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .signInicons i:hover {
+        transform: rotate(20deg);
+        cursor: pointer;
+    }
+    
+    #or {
+        width: 30px;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    
+    #or span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .inputfieild {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 50%;
+        background: transparent;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.363);
+    }
+    
+    #btn {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        background: rgba(32, 31, 31, 0.068);
+        border: 1px solid rgba(46, 40, 40, 0.171);
+        border-radius: 5px;
+    }
+    
+    #form form button:hover {
+        border: rgba(27, 22, 22, 0.945);
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    #form form span {
+        color: rgb(88, 83, 83);
+        font-size: 13px;
+        float: right;
+    }
+    
+    #form form span a {
+        color: rgb(3, 2, 2);
+    }
+    
+    @keyframes gradientbg {
+        0% {
+            background-position: 0% 50%;
+            ;
+        }
+        50% {
+            background-position: 50% 100%;
+            ;
+        }
+        100% {
+            background-position: 0% 50%;
+            ;
+        }
+    }
+    /* For mobile phones: */
+    
+    [class*="col-"] {
+        width: 100%;
+    }
+    /* For tablets: */
+    
+    @media only screen and (min-width: 600px) {
+        nav ul {
+            float: right;
+            margin-right: 0px;
+            font-size: 5px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 50px;
+            margin: 0 0px;
+        }
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            padding: 7px 5px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        nav ul li input {
+            background: transparent;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+            border-radius: 3px;
+            padding: 5px 0px;
+        }
+        nav ul li button {
+            background: transparent;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+            border-radius: 3px;
+            padding: 5px 5px;
+        }
+        #logo {
+            margin-top: -28px;
+            margin-left: -25px;
+            float: left;
+            width: 190px;
+            height: 90px
+        }
+        .search {
+            margin-top: -15px;
+        }
+        .search h1 {
+            font-size: 15px;
+        }
+        .search input {
+            font-size: 13px;
+            width: 235px;
+            height: 30px;
+        }
+        .venues h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        #serbtn {
+            height: 30px;
+            width: 10px;
+        }
+        .col-m-1 {
+            width: 8.33%;
+        }
+        .col-m-2 {
+            width: 16.66%;
+        }
+        .col-m-3 {
+            width: 25%;
+        }
+        .col-m-4 {
+            width: 33.33%;
+        }
+        .col-m-5 {
+            width: 41.66%;
+        }
+        .col-m-6 {
+            width: 50%;
+        }
+        .col-m-7 {
+            width: 58.33%;
+        }
+        .col-m-8 {
+            width: 66.66%;
+        }
+        .col-m-9 {
+            width: 75%;
+        }
+        .col-m-10 {
+            width: 83.33%;
+        }
+        .col-m-11 {
+            width: 91.66%;
+        }
+        .col-m-12 {
+            width: 100%;
+        }
+    }
+    /* For desktop: */
+    
+    @media only screen and (min-width: 790px) {
+        div.areyou h1 {
+            font-size: 40px;
+        }
+        div.areyou i {
+            font-size: 70px;
+            margin-top: 5px;
+        }
+        div.areyou h3 {
+            font-size: 20px;
+        }
+        .signupv {
+            margin-top: 50px
+        }
+        .signupv button {
+            width: 130px;
+            font-size: 20px;
+        }
+        .signupv button:hover {
+            width: 140px;
+        }
+        .vendors h2 {
+            bottom: 40%;
+            left: 15%;
+            font-size: 15px;
+        }
+        nav ul {
+            float: right;
+            margin-right: 7px;
+        }
+        .boxv button {
+            font-size: 15px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 50px;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            padding: 7px 5px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        nav ul li input {
+            background: transparent;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+            border-radius: 3px;
+            padding: 5px 5px;
+        }
+        nav ul li button {
+            background: transparent;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+            border-radius: 3px;
+            padding: 5px 5px;
+        }
+        #logo {
+            margin-top: -30px;
+            margin-left: -30px;
+            float: left;
+            width: 280px;
+            height: 100px
+        }
+        .search {
+            margin-top: -20px;
+        }
+        .search h1 {
+            font-size: 20px;
+        }
+        .search input {
+            font-size: 13px;
+            width: 235px;
+            height: 40px;
+        }
+        #serbtn {
+            height: 40px;
+            width: 20px;
+        }
+        .col-1 {
+            width: 8.33%;
+        }
+        .col-2 {
+            width: 16.66%;
+        }
+        .col-3 {
+            width: 25%;
+        }
+        .col-4 {
+            width: 33.33%;
+        }
+        .col-5 {
+            width: 41.66%;
+        }
+        .col-6 {
+            width: 50%;
+        }
+        .col-7 {
+            width: 58.33%;
+        }
+        .col-8 {
+            width: 66.66%;
+        }
+        .col-9 {
+            width: 75%;
+        }
+        .col-10 {
+            width: 83.33%;
+        }
+        .col-11 {
+            width: 91.66%;
+        }
+        .col-12 {
+            width: 100%;
+        }
+    }
+    
+    [class*="col-"] {
+        float: left;
+        padding: 5px;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    /* for 600px or less usually mobile phones*/
+    
+    @media only screen and (max-width:600px) {
+        #form {
+            width: 100%;
+        }
+        .colmb {
+            width: 50%;
+        }
+        #Header {
+            width: 100%;
+            background: linear-gradient( -45deg, rgba(190, 11, 214, 0.589), rgba(207, 15, 15, 0.603), rgba(21, 191, 243, 0.568), rgba(225, 238, 39, 0.534), rgba(240, 80, 17, 0.589), rgba(100, 23, 201, 0.63));
+            background-size: 200% 300%;
+            animation: gradientbg 10s ease-in-out infinite alternate;
+            height: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+            border-radius: 0px 0px 10px 10px;
+        }
+        /*nav bar*/
+        nav {
+            padding: 0px;
+            margin-left: 0px;
+            width: 100%;
+            height: 40px;
+        }
+        nav .LocationMobile {
+            line-height: 10px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+            border-radius: 3px;
+            padding: 5px 0px;
+            float: right;
+            display: block;
+            margin-top: 2px;
+            margin-right: 7px;
+        }
+        nav .LocationMobile {
+            width: 40%;
+        }
+        .LocationMobile {
+            font-family: 'Montserrat', sans-serif;
+            background: transparent;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+            border-radius: 3px;
+            padding: 5px 5px;
+        }
+        .LocationMobile select:hover {
+            background: #0000001a;
+            border: 1px solid rgba(85, 76, 76, 0.164);
+        }
+        .mbhide {
+            display: none;
+        }
+        .checkbtn {
+            display: block;
+        }
+        #cancel {
+            display: none;
+        }
+        nav ul {
+            text-align: center;
+            width: 100%;
+            display: none;
+            animation: slide-down .5s ease-in-out;
+        }
+        nav ul li {
+            display: block;
+            border-bottom: 1px solid #EAEAEB;
+            margin: 0;
+        }
+        nav ul li a {
+            font-size: 10px;
+        }
+        a.active {
+            background: #d6ffd623;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+        }
+        a:hover {
+            background: #0000001a;
+            border: 1px solid rgba(65, 42, 42, 0.164);
+        }
+        #check:checked~ul {
+            display: block;
+        }
+        #check:checked~label #btn {
+            display: none;
+        }
+        #check:checked~label #cancel {
+            display: block;
+        }
+        #logo {
+            margin-top: -20px;
+            margin-left: -20px;
+            float: left;
+            width: 160px;
+            height: 70px
+        }
+        .search {
+            margin-top: -10px;
+        }
+        .search h1 {
+            font-size: 10px;
+            text-align: left;
+            margin-top: 5px;
+        }
+        .search input {
+            font-size: 8px;
+            width: 150px;
+            height: 30px;
+        }
+        #serbtn {
+            height: 30px;
+            width: 10px;
+        }
+        .cover {
+            margin-top: 10px;
+            height: 450px;
+        }
+        .box,
+        .boxv {
+            height: 200px;
+        }
+        .venues h2 {
+            font-family: 'Kaushan Script', cursive;
+            font-weight: bold;
+            font-size: 7px;
+        }
+        .boxv button {
+            bottom: 15px;
+            right: 10px;
+            font-size: 10px;
+        }
+        .vendors h2 {
+            bottom: 40%;
+            left: 30%;
+            font-size: 10px;
+        }
+        .vendors h1,
+        .venues h1 {
+            font-size: 25px;
+        }
+        div.areyou h1 {
+            font-size: 30px;
+        }
+        div.areyou i {
+            font-size: 40px;
+            margin-top: 3px;
+        }
+        div.areyou h3 {
+            font-size: 8px;
+        }
+        .signupv {
+            margin-top: 15px
+        }
+        .signupv button {
+            width: 100px;
+            font-size: 10px;
+        }
+        .signupv button:hover {
+            width: 110px;
+        }
+        div.areyou {
+            height: 350px;
+        }
+        .footer {
+            text-align: center;
+        }
+        .applogo ul li a img {
+            width: 70px;
+            height: 30px;
+        }
+    }
+    /* Big screens 1240px or above */
+    
+    @media screen and (min-width:1240px) {
+        .vendors h2 {
+            bottom: 40%;
+            left: 20%;
+            font-size: 17px;
+        }
+        .location select {
+            padding: 5px 5px;
+            margin-right: 20px;
+            width: 150px;
+            font-size: 14px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 50px;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        #logo {
+            margin-top: -35px;
+            margin-left: -30px;
+            float: left;
+            width: 300px;
+            height: 120px;
+        }
+        .search {
+            margin-top: -30px;
+        }
+        .search h1 {
+            font-size: 30px;
+        }
+        .search input {
+            font-size: 15px;
+            width: 300px;
+            height: 40px;
+        }
+        #serbtn {
+            height: 40px;
+            width: 30px;
+        }
+        .cover {
+            height: 550px;
+        }
+        .venues h2 {
+            font-size: 17px;
+        }
+    }
+    /*for stop in 320px less phones*/
+    
+    @media only screen and (max-width: 350px) {
+        div.container {
+            width: 350px;
+        }
+        div.search {
+            width: 350px;
+        }
+    }
+    
+    @keyframes slide-down {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+        }
+    }
